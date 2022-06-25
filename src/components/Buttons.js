@@ -17,7 +17,7 @@ const Buttons = ({data, setData, eventId, setEventId}) => {
   const moveDataFromToday = (()=>{
     data.map(dataRow => {
       // return dataRow.id == "1656098719369" && (setData([...data, dataRow.date = "tomorrow"]))
-      return eventId.some(item => item.id == dataRow.id) && (setData([...data, dataRow.date = "tomorrow"]))
+      return eventId.some(item => item.id == dataRow.id) && (setEventId([]), setData([...data, dataRow.date = "tomorrow"]))
       // console.log(eventId.includes("1656098719369"))
       // console.log(eventId.some(item => item.id == dataRow.id)) 
     } )
@@ -25,7 +25,7 @@ const Buttons = ({data, setData, eventId, setEventId}) => {
 
   const moveDataFromTomorrow = (()=>{
     data.map(dataRow => {
-      return eventId.some(item => item.id == dataRow.id) && (setData([...data, dataRow.date = "today"]))
+      return eventId.some(item => item.id == dataRow.id) && (setEventId([]), setData([...data, dataRow.date = "today"]))
     } )
   })
 

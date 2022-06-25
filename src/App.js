@@ -43,6 +43,7 @@ function App() {
 
    console.log('id:', e.target.id, 'Value:',e.target.value, 'Name:',e.target.name,"checked:", e.target.checked)
    e.target.checked ? setEventId([...eventId, {id: e.target.id, date: e.target.name }]) : EditedData()
+  //  document.getElementById(e.target.id).checked = false
   }
   
   return (
