@@ -1,5 +1,5 @@
 import React from 'react'
-const Today = ({data,eventId,setEventId}) => {
+const Today = ({data,eventId,setEventId,singleData}) => {
   
   // form elküldés egybe:
   const formData = (e)=>{
@@ -13,17 +13,17 @@ const Today = ({data,eventId,setEventId}) => {
   }
 
   // form adatok 
-    const singleData = (e) => {
-      const id = e.target.id
+  //   const singleData = (e) => {
+  //     const id = e.target.id
       
-      const EditedData = () => {
-		    let newEventId = eventId.filter(singleData => singleData.id !== id)              
-        setEventId(newEventId)
-      }  
+  //     const EditedData = () => {
+	// 	    let newEventId = eventId.filter(singleData => singleData.id !== id)              
+  //       setEventId(newEventId)
+  //     }  
 
-   console.log('id:', e.target.id, 'Value:',e.target.value, 'Name:',e.target.name,"checked:", e.target.checked)
-   e.target.checked ? setEventId([...eventId, {id: e.target.id, date: e.target.name }]) : EditedData()
-  }
+  //  console.log('id:', e.target.id, 'Value:',e.target.value, 'Name:',e.target.name,"checked:", e.target.checked)
+  //  e.target.checked ? setEventId([...eventId, {id: e.target.id, date: e.target.name }]) : EditedData()
+  // }
 
   return (
     <div className='today common'>

@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Tomorrow = ({data}) => {
-  const singleData = (e) => {
-   console.log('id:', e.target.id, 'Value:',e.target.value, 'Name:',e.target.name,"checked:", e.target.checked)
-  }
+const Tomorrow = ({data,singleData}) => {
+  // const singleData = (e) => {
+  //  console.log('id:', e.target.id, 'Value:',e.target.value, 'Name:',e.target.name,"checked:", e.target.checked)
+  // }
   return (
     <div className='tomorrow common'>
      <h3>Tasks for Tomorrow</h3>
+     <form className="list">
        {data && data.map((event)=>{
            return (
             event.date === "tomorrow" &&
@@ -16,7 +17,7 @@ const Tomorrow = ({data}) => {
           </label>
           </div>) 
         })} 
-         
+        </form>   
      </div>  
   )
 }

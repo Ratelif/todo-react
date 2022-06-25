@@ -14,7 +14,7 @@ const Buttons = ({data, setData, eventId, setEventId}) => {
     setEventId([])
   })
 
-  const moveData = (()=>{
+  const moveDataFromToday = (()=>{
     data.map(dataRow => {
       // return dataRow.id == "1656098719369" && (setData([...data, dataRow.date = "tomorrow"]))
       return eventId.some(item => item.id == dataRow.id) && (setData([...data, dataRow.date = "tomorrow"]))
@@ -23,14 +23,20 @@ const Buttons = ({data, setData, eventId, setEventId}) => {
     } )
   })
 
+  const moveDataFromTomorrow = (()=>{
+    data.map(dataRow => {
+      return eventId.some(item => item.id == dataRow.id) && (setData([...data, dataRow.date = "today"]))
+    } )
+  })
+
   return (
     <div className='buttons'>
-      <div className="button" onClick={()=> moveData()}>
+      <div className="button" onClick={()=> moveDataFromToday()}>
       <p><FaArrowAltCircleRight /></p>
       <p>Tomorrow</p>
       </div>
 
-      <div className="button" onClick={()=> console.log('today button clicked')}>
+      <div className="button" onClick={()=> moveDataFromTomorrow()}>
       <p><FaArrowAltCircleLeft /></p>
       <p>Today</p>
       </div>
