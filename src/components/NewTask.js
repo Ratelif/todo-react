@@ -1,14 +1,21 @@
 import React from 'react'
 
-const NewTask = () => {
+const NewTask = ({data, setData}) => {
+  const getData = (e)=> {
+    e.preventDefault()
+    const inputData = new FormData(e.target) 
+    const dataObj = Object.fromEntries(inputData.entries())
+    const id = new Date().getTime().toString()
+    setData([...data, {id: id, title: dataObj['title'], date: dataObj['date']}])
+  }
   return (
     <div className='newTask common'>
       <h3>Add new task</h3>
-      <form>
-         <input className='size text' type="text" name="describe-task" id="describe-task" placeholder='Describe task'/>
+      <form onSubmit={getData}>
+         <input className='size text' type="text" name="title" id="title-id" required placeholder='Describe task'/>
          <div className="radio">
-            <input type="radio" name="describe-task" value="today" /><span>Today</span> 
-            <input type="radio" name="describe-task" value="tomorrow" /><span>Tomorrow</span>
+            <input type="radio" name="date" value="today" required /><span>Today</span> 
+            <input type="radio" name="date" value="tomorrow" required/><span>Tomorrow</span>
          </div>
          <input type="submit" value="Save" className='size' />
       </form>

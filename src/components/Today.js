@@ -1,12 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
-import {FiCheckSquare} from 'react-icons/fi' 
-import {FiSquare} from 'react-icons/fi' 
 
-
-const Today = () => {
-  const [status, setStatus] = useState(false)
-
+const Today = ({data}) => {
   const formData = (e)=>{
    e.preventDefault()
    const formData = new FormData(e.target);
@@ -25,22 +19,15 @@ const Today = () => {
     <div className='today common'>
       <h3>Tasks for Today</h3>
       <form className="list" onSubmit={formData}>
-        <div className="list-item">
-          <label>
-            <input type="checkbox" name="vehicle" id="vehicle1" value="Go 1" onChange={singleData}/><span>Go shopping</span>
+        {data && data.map((event)=>{
+           return (
+            event.date === "today" &&
+           <div className="list-item" key={event.id}>
+            <label>
+            <input type="checkbox" name="vehicle" id={event.id} value="Go 3" onChange={singleData}/><span>{event.title}</span>
           </label>
-        </div>
-        <div className="list-item">
-          <label>
-            <input type="checkbox" name="vehicle" id="vehicle2" value="Go 2" onChange={singleData}/><span>Go running</span>
-          </label>
-        </div>
-        <div className="list-item">
-          <label>
-            <input type="checkbox" name="vehicle" id="vehicle3" value="Go 3" onChange={singleData}/><span>Read</span>
-          </label>
-        </div>
-         <input type="submit" value="küld" />
+          </div>) 
+        })}
       </form>  
     </div>
   )

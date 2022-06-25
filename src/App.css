@@ -34,6 +34,7 @@ body {
   border-radius: 8px 8px 0 0;
 }
 
+
 /* New Task  */
 .newTask {
   height: 15vh;
@@ -88,6 +89,7 @@ input[type='radio'] {
   accent-color: var(--first-color);
 }
 
+
 /* Tasks */
 .tasks {
   display: flex;
@@ -96,6 +98,7 @@ input[type='radio'] {
   gap: 2rem;
   margin-top: 10vh;
 }
+
 
 /* Today and Tomorrow*/
 .today, .tomorrow{
@@ -112,6 +115,7 @@ input[type='radio'] {
   gap: 0.3rem;
   padding: 0.5rem 0 0.5rem 0.8rem;
 }
+
 
 /* Customize checkbox CSS */
 label {
@@ -157,9 +161,6 @@ input[type="checkbox"]:not(:disabled)+span:hover:before {
   text-shadow: 0 1px 2px #77F;
 }
 
-
-
-/* *********************************************************************************** */
 
 /* buttons */
 .buttons {

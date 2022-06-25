@@ -3,12 +3,12 @@ import Buttons from './Buttons'
 import Today from './Today'
 import Tomorrow from './Tomorrow'
 
-const Tasks = () => {
+const Tasks = ({data}) => {
   return (
     <div className='tasks'> 
-         <Today />
+         <Today data={data}/>
          <Buttons />
-         <Tomorrow />
+         <Tomorrow data={data}/>
     </div>
   )
 }
