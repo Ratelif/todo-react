@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import NewTask from './components/NewTask'; 
 import Tasks from './components/Tasks';
@@ -29,13 +29,15 @@ function App() {
         "title" : "Go on holiday",
         "date" : "tomorrow"
     }])
+
+    const [eventId, setEventId] = useState([])
   
   return (
     <div className="App">
       <NewTask data={data} setData={setData}/>
-      <Tasks data={data}/>
-
+      <Tasks data={data} setData={setData} eventId={eventId} setEventId={setEventId}/>
     </div>
+   
   );
 }
 

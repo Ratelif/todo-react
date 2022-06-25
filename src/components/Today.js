@@ -1,6 +1,7 @@
 import React from 'react'
-
-const Today = ({data}) => {
+const Today = ({data,eventId,setEventId}) => {
+  
+  // form elküldés egybe:
   const formData = (e)=>{
    e.preventDefault()
    const formData = new FormData(e.target);
@@ -11,8 +12,17 @@ const Today = ({data}) => {
    console.log(e.target.parentElement);
   }
 
-  const singleData = (e) => {
+  // form adatok 
+    const singleData = (e) => {
+      const id = e.target.id
+      
+      const EditedData = () => {
+		    let newEventId = eventId.filter(singleData => singleData.id !== id)              
+        setEventId(newEventId)
+      }  
+
    console.log('id:', e.target.id, 'Value:',e.target.value, 'Name:',e.target.name,"checked:", e.target.checked)
+   e.target.checked ? setEventId([...eventId, {id: e.target.id, date: e.target.name }]) : EditedData()
   }
 
   return (
@@ -24,10 +34,11 @@ const Today = ({data}) => {
             event.date === "today" &&
            <div className="list-item" key={event.id}>
             <label>
-            <input type="checkbox" name="vehicle" id={event.id} value="Go 3" onChange={singleData}/><span>{event.title}</span>
+            <input type="checkbox" name={event.date} id={event.id} value={event.date} onChange={singleData}/><span>{event.title}</span>
           </label>
           </div>) 
         })}
+        {/* <input type="submit" value='go'/> */}
       </form>  
     </div>
   )
