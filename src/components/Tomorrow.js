@@ -1,16 +1,24 @@
 import React from 'react'
-import {FiCheckSquare} from 'react-icons/fi' 
-import {FiSquare} from 'react-icons/fi' 
 
 const Tomorrow = () => {
+  const singleData = (e) => {
+   console.log('id:', e.target.id, 'Value:',e.target.value, 'Name:',e.target.name,"checked:", e.target.checked)
+  }
   return (
     <div className='tomorrow common'>
      <h3>Tasks for Tomorrow</h3>
-      <div className="list">
-         <p className='list-item'><FiCheckSquare/> Pay the bill</p>
-         <p className='list-item'><FiSquare/> Go on holiday</p>
+      
+         <div className="list-item">
+          <label>
+            <input type="checkbox" name="vehicle" id="vehicle1" value="Go 1" onChange={singleData}/><span>Pay the bill</span>
+          </label>
+        </div>
+        <div className="list-item">
+          <label>
+            <input type="checkbox" name="vehicle" id="vehicle1" value="Go 1" onChange={singleData}/><span>Go on holiday</span>
+          </label>
+        </div>
       </div>  
-    </div>
   )
 }
 
