@@ -226,8 +226,12 @@ input[type="checkbox"]:not(:disabled)+span:hover:before {
       flex-wrap:  wrap; 
     }
 
+    .newTask {
+      height: 25vh;
+    }
     .size { 
       width: 60%;
+      margin-top: 1rem;
     }
 }
 
