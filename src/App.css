@@ -1,0 +1,152 @@
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 10px;
+  padding: 0;
+  height: 70vh;
+  max-width: 100%;
+}
+
+* {
+  font-size: 1.1rem;
+  box-sizing: border-box;
+}
+
+:root {
+  --first-color: #3498DB;
+  --second-color: white;
+}
+
+.common {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.common h3 {
+  background-color: lightgrey;
+  margin: 0;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+/* New Task  */
+.newTask {
+  height: 15vh;
+}
+
+.newTask h3 {
+  background-color: lightgrey;
+  margin: 0;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.newTask form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 10vh;
+}
+
+.size {
+  width: 30%;
+  border: 0px;
+  background-color: var(--first-color);
+  color: var(--second-color);
+  padding: 8px 6px;
+  border-radius: 3px;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.456);
+}
+
+.newTask form input:first-of-type:focus {
+  outline: none;
+}
+
+form input[type="submit"] {
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  color: var(--first-color);
+  background-color: var(--second-color);;
+  border: 1px solid var(--first-color);
+}
+
+.radio span:first-of-type{
+  margin-right: 15px;
+}
+
+input[type='radio'] {
+  accent-color: var(--first-color);
+}
+
+/* Tasks */
+.tasks {
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 10vh;
+}
+
+/* Today and Tomorrow*/
+.today, .tomorrow{
+  width: 42%;
+}
+
+.list {
+  min-height: 3rem;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding-left: 0.8rem;
+}
+
+.list-item svg {
+  /* font-size: 1rem; */
+  
+}
+
+
+
+/* buttons */
+.buttons {
+  padding-top: 1.8rem;
+}
+
+.buttons p{
+  margin: 0;
+  text-align: center;
+}
+
+.buttons svg {
+  font-size: 2.5rem;
+}
+
+.button {
+  margin-bottom: 2rem;
+}
+
+.button:hover {
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+

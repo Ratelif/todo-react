@@ -1,0 +1,22 @@
+{
+  "meetups" : {
+    "-MnS0FWRkdFgKIoNrXq6" : {
+      "address" : "Szeged, Sólyom street",
+      "description" : "have a nice trip",
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
+      "title" : "some beer for rest"
+    },
+    "-MnS4FsL4dCP2IG30AMN" : {
+      "address" : "Devil island",
+      "description" : "Target searching",
+      "image" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg",
+      "title" : "second chance"
+    },
+    "-MnSOcDc4I4LNLbZVUDR" : {
+      "address" : "Earth",
+      "description" : "Fall",
+      "image" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fnature%2F&psig=AOvVaw01yhAAr0sPpGM5FmQTyncm&ust=1635888415644000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPjm7bCN-PMCFQAAAAAdAAAAABAD",
+      "title" : "Természet"
+    }
+  }
+}
