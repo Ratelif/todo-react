@@ -200,27 +200,35 @@ input[type="checkbox"]:not(:disabled)+span:hover:before {
   
     input[type="checkbox"]+span:before {
       font: 14pt FontAwesome;
-      }
+    }
 
-      .tasks {
+    .tasks {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-      }
+    }
 
-      .today,.tomorrow {
+    .today,.tomorrow {
         width: 80%;
-      }
+    }
 
-      .buttons {
+    .buttons {
          display: flex;
          gap: 3rem;
-      }
+    }
 
-      .button:nth-child(2)  {
+    .button:nth-child(2)  {
           order: 3;
-      }
+    }
+
+    .newTask form {
+      flex-wrap:  wrap; 
+    }
+
+    .size { 
+      width: 60%;
+    }
 }
 
 
