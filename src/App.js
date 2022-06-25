@@ -35,15 +35,11 @@ function App() {
     // form adatok 
     const singleData = (e) => {
       const id = e.target.id
-      
       const EditedData = () => {
 		    let newEventId = eventId.filter(singleData => singleData.id !== id)              
         setEventId(newEventId)
       }  
-
-   console.log('id:', e.target.id, 'Value:',e.target.value, 'Name:',e.target.name,"checked:", e.target.checked)
-   e.target.checked ? setEventId([...eventId, {id: e.target.id, date: e.target.name }]) : EditedData()
-  //  document.getElementById(e.target.id).checked = false
+      e.target.checked ? setEventId([...eventId, {id: e.target.id, date: e.target.name }]) : EditedData()
   }
   
   return (
@@ -51,7 +47,6 @@ function App() {
       <NewTask data={data} setData={setData}/>
       <Tasks data={data} setData={setData} eventId={eventId} setEventId={setEventId} singleData={singleData}/>
     </div>
-   
   );
 }
 

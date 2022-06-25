@@ -89,6 +89,9 @@ input[type='radio'] {
   accent-color: var(--first-color);
 }
 
+.radio input:hover {
+  cursor: pointer;
+}
 
 /* Tasks */
 .tasks {
@@ -98,7 +101,6 @@ input[type='radio'] {
   gap: 2rem;
   margin-top: 10vh;
 }
-
 
 /* Today and Tomorrow*/
 .today, .tomorrow{
@@ -116,6 +118,9 @@ input[type='radio'] {
   padding: 0.5rem 0 0.5rem 0.8rem;
 }
 
+.list-item span:hover {
+  color:darkgray;
+}
 
 /* Customize checkbox CSS */
 label {
@@ -147,6 +152,7 @@ input[type="checkbox"]+span:before {
 
 input[type="checkbox"]:checked+span:before {
   content: '\00f046';
+  color: var(--first-color);
 }
 
 input[type="checkbox"]:focus+span:before {
@@ -160,7 +166,6 @@ input[type="checkbox"]:disabled+span {
 input[type="checkbox"]:not(:disabled)+span:hover:before {
   text-shadow: 0 1px 2px #77F;
 }
-
 
 /* buttons */
 .buttons {
@@ -183,6 +188,39 @@ input[type="checkbox"]:not(:disabled)+span:hover:before {
 .button:hover {
   color: var(--first-color);
   cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+  * {
+      font-size: 0.9rem;
+    }
+    input[type="checkbox"]+span {
+      font: 9pt sans-serif;
+      }
+  
+    input[type="checkbox"]+span:before {
+      font: 14pt FontAwesome;
+      }
+
+      .tasks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .today,.tomorrow {
+        width: 80%;
+      }
+
+      .buttons {
+         display: flex;
+         gap: 3rem;
+      }
+
+      .button:nth-child(2)  {
+          order: 3;
+      }
 }
 
 

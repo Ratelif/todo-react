@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const NewTask = ({data, setData}) => {
   const getData = (e)=> {
     e.preventDefault()

@@ -1,9 +1,6 @@
 import React from 'react'
 
 const Tomorrow = ({data,singleData}) => {
-  // const singleData = (e) => {
-  //  console.log('id:', e.target.id, 'Value:',e.target.value, 'Name:',e.target.name,"checked:", e.target.checked)
-  // }
   return (
     <div className='tomorrow common'>
      <h3>Tasks for Tomorrow</h3>
