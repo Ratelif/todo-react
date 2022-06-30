@@ -1,7 +1,5 @@
 import React from 'react'
-import {FaArrowAltCircleRight} from 'react-icons/fa' 
-import {FaArrowAltCircleLeft} from 'react-icons/fa' 
-import {BsTrashFill} from 'react-icons/bs' 
+import Button from './Button'
 
 const Buttons = ({data, setData, eventId, setEventId}) => {
   const deleteData = (()=> {
@@ -25,20 +23,9 @@ const Buttons = ({data, setData, eventId, setEventId}) => {
 
   return (
     <div className='buttons'>
-      <div className="button" onClick={()=> moveDataFromToday()}>
-      <p><FaArrowAltCircleRight /></p>
-      <p>Tomorrow</p>
-      </div>
-
-      <div className="button" onClick={()=> moveDataFromTomorrow()}>
-      <p><FaArrowAltCircleLeft /></p>
-      <p>Today</p>
-      </div>
-
-      <div className="button" onClick={()=> deleteData()}>
-      <p><BsTrashFill /></p>
-      <p>Delete</p>
-      </div>
+      <Button sendFunction={moveDataFromToday} text="Tomorrow" />
+      <Button sendFunction={moveDataFromTomorrow} text="Today" />
+      <Button sendFunction={deleteData} text="Delete" />
     </div>
   )
 }
