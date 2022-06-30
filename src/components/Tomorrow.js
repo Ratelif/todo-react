@@ -1,20 +1,10 @@
 import React from 'react'
+import Form from './Form'
 
 const Tomorrow = ({data,singleData}) => {
   return (
     <div className='tomorrow common'>
-     <h3>Tasks for Tomorrow</h3>
-     <form className="list">
-       {data && data.map((event)=>{
-           return (
-            event.date === "tomorrow" &&
-           <div className="list-item" key={event.id}>
-            <label>
-            <input type="checkbox" name="vehicle" id={event.id} value="Go 3" onChange={singleData}/><span>{event.title}</span>
-          </label>
-          </div>) 
-        })} 
-        </form>   
+        <Form data={data} singleData={singleData} header="Tasks for Tomorrow" day="tomorrow" />
      </div>  
   )
 }

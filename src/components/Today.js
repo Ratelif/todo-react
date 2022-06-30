@@ -1,20 +1,10 @@
 import React from 'react'
-const Today = ({data,eventId,setEventId,singleData}) => {
-  
+import Form from './Form'
+
+const Today = ({data,singleData}) => {
   return (
     <div className='today common'>
-      <h3>Tasks for Today</h3>
-      <form className="list">
-        {data && data.map((event)=>{
-           return (
-            event.date === "today" &&
-           <div className="list-item" key={event.id}>
-            <label>
-            <input type="checkbox" name={event.date} id={event.id} value={event.date} onChange={singleData}/><span>{event.title}</span>
-          </label>
-          </div>) 
-        })}
-      </form>  
+      <Form data={data} singleData={singleData} header="Tasks for Today" day="today" />
     </div>
   )
 }
